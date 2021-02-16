@@ -3,8 +3,6 @@
 
 ## Objetivos
 
-![Image of Image1](/docs/img/image1.png)
-
 ## Desarrollo
 
 En el desarrollo
