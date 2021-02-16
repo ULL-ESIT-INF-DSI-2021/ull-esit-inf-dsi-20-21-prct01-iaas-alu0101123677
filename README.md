@@ -14,4 +14,5 @@
 
 ## Información
 
-Para acceder al informe de la práctica 1, se puede acceder mendiante el siguiente enlace ------ en donde se explica el desarrollo de la práctica en formato Gitguh Page.
+Para acceder al informe de la práctica 1, se puede acceder mendiante el siguiente enlace http://github.com - automatic!
+[GitHub](http://github.com) en donde se explica el desarrollo de la práctica en formato Gitguh Page.
