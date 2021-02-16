@@ -3,21 +3,31 @@
 
 ## Objetivos
 
-![Image of Yaktocat](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct01-iaas-alu0101123677/blob/main/docs/img/image1.png)
+![Image of Image1](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct01-iaas-alu0101123677/blob/main/docs/img/image1.png)
 
 ## Desarrollo
 
-### Pasos previos
+### Tareas Previas
 
-### Conectarse a la VPN de la ULL
+### Configuración de la máquina virtual en el Iaas
 
-### Acceso al servicio Iaas de la ULL
+#### Conectarse a la VPN de la ULL
 
-### Conexión remota y primeras configuraciones
+#### Acceso al servicio Iaas de la ULL
 
-### Claves públicas-privadas
+#### Conexión remota y primeras configuraciones
 
-###
+#### Claves públicas-privadas
+
+### Instalación de git y Node.js en la máquina virtual del Iaas
+
+#### Instalación y configuración de git
+
+#### Configuración del prompt
+
+#### Conexión con GitHub
+
+#### Instalación de Node
 
 ## Conclusiones
 
