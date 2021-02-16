@@ -12,4 +12,6 @@
   
   **Práctica:** Práctica 1. Configuración de máquina virtual en el IaaS
 
-ull-esit-inf-dsi-20-21-prct01-iaas-alu0101123677 created by GitHub Classroom
+## Información
+
+Para acceder al informe de la práctica 1, se puede acceder mendiante el siguiente enlace ------ en donde se explica el desarrollo de la práctica en formato Gitguh Page.
