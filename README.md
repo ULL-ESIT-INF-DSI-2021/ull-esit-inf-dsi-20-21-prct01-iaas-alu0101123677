@@ -6,7 +6,7 @@
   
   **Gmail:** alu0101123677@ull.edu.es
   
-  **Universidad:** Universidad de La Laugna
+  **Universidad:** Universidad de La Laguna
   
   **Asignatura:** Desarrollo de Sistemas Informáticos
   
