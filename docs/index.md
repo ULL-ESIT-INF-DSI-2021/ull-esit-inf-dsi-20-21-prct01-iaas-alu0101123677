@@ -15,6 +15,6 @@
 
 Nombre | Enlace
 ------------ | -------------
-Content from cell 1 | Content from cell 2
+Práctica 1 | https://ull-esit-inf-dsi-2021.github.io/prct01-iaas/
 Content in the first column | Content in the second column
 
