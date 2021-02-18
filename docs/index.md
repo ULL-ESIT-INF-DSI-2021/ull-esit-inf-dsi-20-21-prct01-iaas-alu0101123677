@@ -43,6 +43,10 @@ El objetivo principal de la práctica es la preparación del entorno de trabajo 
 
 ## 4. Conclusiones
 
+En conclusión me parece que este tipo de prácticas introductorias son muy importantes debido a que si no se han realizado con anterioridad conexiones remotas, conectarse a una vpn o configurar un entorno de trabajo, son cosas que se tienen que tener en cuenta cómo básicas a nivel profesional en el mundo de la ingeniería informatica. Por otro lado, también es importante saber cómo manejarse con GitHub, sus repositorios y control de versiones con git, así cómo tener soltura con un lenguaje de marcas cómo Markdown o herramientas como GitHub Pages.
+
+Ya para terminar, recalcar la importancia de la preparación del entorno de trabajo para así llegar a aportar soluciones de la manera más óptima posible, en este caso preparando para utilizar JavaScript y TypeScript.
+
 ## 5. Bibliografía
 
 **[Guión Práctica 1](https://ull-esit-inf-dsi-2021.github.io/prct01-iaas/):** Guión de la práctica 1 de la asignatura de Desarrollo de Sistemas Informáticos.
