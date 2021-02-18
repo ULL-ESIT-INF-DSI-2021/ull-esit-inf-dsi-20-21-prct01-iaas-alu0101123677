@@ -17,8 +17,6 @@ El objetivo principal de la práctica es la preparación del entorno de trabajo 
 
 ## 3. Desarrollo
 
-En el desarrollo
-
 ### 3.1 Tareas Previas
 
 ### 3.2 Configuración de la máquina virtual en el Iaas
