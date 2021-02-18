@@ -1,9 +1,19 @@
 # Informe Práctica 1. Configuración de máquina virtual en el IaaS
 ## 1. Introducción
 
-Informe de la primera práctica de la asignatura de Desarrollo de Sistemas Informáticos. En la práctica propuesta se ha realizado la configuración inicial de la máquina virtual otorgada mediante el Iaas, así cómo la posterior instalación de git y Node.js, además de configurar la máquina local para agilizar la conexión rémota entre ambas máquinas, y con el GitHub asociado al correo institucional.
+Informe de la primera práctica de la asignatura de **Desarrollo de Sistemas Informáticos**. En la práctica propuesta se ha realizado la configuración inicial de la **máquina virtual** otorgada mediante el **IaaS**, así cómo la posterior instalación de **git** y **Node.js**, además de configurar la **máquina local** para agilizar la conexión rémota entre ambas máquinas, y con el GitHub asociado al correo institucional.
 
 ## 2. Objetivos
+
+El objetivo principal de la práctica es la preparación del entorno de trabajo de la asignatura. Para conseguirlo se tienen los siguientes objetivos:
+
+* Aprender a conectarse a la **VPN de la ULL**, así cómo acceder al Iaas de la ULL.
+* Saber realizar una conexión rémota mediante **SSH**.
+* Configuración inicial de la máquina virtual.
+* Configuración inicial de la máquina local.
+* Manejo de **claves SSH**.
+* Configuración de del **prompt** del la máquina virtual.
+* Instalación de git y Node en la máquina virtual.
 
 ## 3. Desarrollo
 
