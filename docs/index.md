@@ -1,37 +1,37 @@
 # Informe Práctica 1. Configuración de máquina virtual en el IaaS
-## Introducción
+## 1. Introducción
 
-## Objetivos
+## 2. Objetivos
 
-## Desarrollo
+## 3. Desarrollo
 
 En el desarrollo
 
-### Tareas Previas
+### 3.1 Tareas Previas
 
-### Configuración de la máquina virtual en el Iaas
+### 3.2 Configuración de la máquina virtual en el Iaas
 
-#### Conectarse a la VPN de la ULL
+#### 3.2.1 Conectarse a la VPN de la ULL
 
-#### Acceso al servicio Iaas de la ULL
+#### 3.2.2 Acceso al servicio Iaas de la ULL
 
-#### Conexión remota y primeras configuraciones
+#### 3.2.3 Conexión remota y primeras configuraciones
 
-#### Claves públicas-privadas
+#### 3.2.4 Claves públicas-privadas
 
-### Instalación de git y Node.js en la máquina virtual del Iaas
+### 3.3 Instalación de git y Node.js en la máquina virtual del Iaas
 
-#### Instalación y configuración de git
+#### 3.3.1 Instalación y configuración de git
 
-#### Configuración del prompt
+#### 3.3.2 Configuración del prompt
 
-#### Conexión con GitHub
+#### 3.3.3 Conexión con GitHub
 
-#### Instalación de Node
+#### 3.3.4 Instalación de Node
 
-## Conclusiones
+## 4. Conclusiones
 
-## Bibliografía
+## 5. Bibliografía
 
 **[Guión Práctica 1](https://ull-esit-inf-dsi-2021.github.io/prct01-iaas/):** Guión de la práctica 1 de la asignatura de Desarrollo de Sistemas Informáticos.
 
