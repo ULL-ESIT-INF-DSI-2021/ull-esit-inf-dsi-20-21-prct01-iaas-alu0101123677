@@ -49,6 +49,16 @@ Conectados a la VPN de la ULL y con la máquina virtual encendida procedemos a a
 $ ssh usuario@10.6.XXX.XXX
 ```
 
+Cuando nos hayamos conectado rémotamente nos preguntará lo siguiente 
+
+```bash
+The authenticity of host '10.6.XXX.XXX (10.6.XXX.XXX)' can't be established.
+ECDSA key fingerprint is SHA256:1Xm4M66FeBUSiykP7SqJgObwjmVs2gEouBhy1PTWDV4.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+```
+
+por lo que tendremos que introducir ```ỳes```
+
 #### 3.2.4 Claves públicas-privadas
 
 ### 3.3 Instalación de git y Node.js en la máquina virtual del Iaas
