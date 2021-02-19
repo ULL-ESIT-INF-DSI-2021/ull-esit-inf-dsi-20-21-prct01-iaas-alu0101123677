@@ -27,6 +27,8 @@ Cuando ya tengamos el repositorio de la práctica 1, necesitaremos saber manejar
 
 ![Image of Settings](img/Setting%20GitHub%20Page.jpg)
 
+![Image of GitHub Pages](img/github%20page.jpg)
+
 ### 3.2 Configuración de la máquina virtual en el Iaas
 
 ####   3.2.1 Conectarse a la VPN de la ULL
