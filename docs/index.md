@@ -46,13 +46,13 @@ Conectados a la VPN accedemos al [IaaS de la ULL](https://iaas.ull.es) con nuest
 
 #### 3.2.3 Conexión remota y primeras configuraciones
 
-Conectados a la VPN de la ULL y con la máquina virtual encendida procedemos a abrir un terminal y a conectarnos de manera rémota mediante el comando ```ssh```
+Conectados a la VPN de la ULL y con la máquina virtual encendida procedemos a abrir un terminal y a conectarnos de manera rémota mediante el comando ```ssh```.
 
 ```bash
 bruno@bruno-X550VX:~$ ssh usuario@10.6.XXX.XXX
 ```
 
-Cuando nos hayamos conectado rémotamente nos preguntará lo siguiente 
+Cuando nos hayamos conectado rémotamente nos preguntará lo siguiente:
 
 ```bash
 The authenticity of host '10.6.XXX.XXX (10.6.XXX.XXX)' can't be established.
@@ -65,13 +65,13 @@ por lo que tendremos que introducir ```yes```. Una vez hecho esto nos pedirá in
 ![Image of SSH](img/ssh.png)
 
 
-Lo siguiente será cambiar el nombre de nuestra máquina, para eso abriremos el fichero ```/etc/hostname``` con ```Vi``` o ```Vim``` y el nombre de *ubuntu* lo cambiamos por el de nuestra máquina virtual, en nuestro caso es *iaas_dsi13*
+Lo siguiente será cambiar el nombre de nuestra máquina, para eso abriremos el fichero ```/etc/hostname``` con ```Vi``` o ```Vim``` y el nombre de *ubuntu* lo cambiamos por el de nuestra máquina virtual, en nuestro caso es *iaas_dsi13*.
 
 ![Image of cambiar nombre](img/cambiar%20nombre.png)
 
-A su vez, cambiaremos donde pone *ubuntu* en el siguiente fichero ```/etc/hosts``` también por el nombre de la máquina virtual, con esto cambiamos el nombre del host
+A su vez, cambiaremos donde pone *ubuntu* en el siguiente fichero ```/etc/hosts``` también por el nombre de la máquina virtual, con esto cambiamos el nombre del host.
 
-![Image of cambiar nombre](img/host%20local.png)
+![Image of host local](img/host%20local.png)
 
 
 Ahora tendriamos que reiniciar nuestra máquina virtual para que todo los cambios tengan efecto, pero antes actualizaremos el software de la misma. Para esto realizamos los siguientes comandos:
@@ -85,20 +85,74 @@ usuario@ubuntu:~$ sudo reboot
 ...
 ```
 
-Aprovechando que la máquina virtual se encuentra reiniciandose procedemos a configurar nuestra máquina local para que cuando accedamos de manera rémota no tendremos que recordar la IP. el fichero que hay que modificar es el ```etc/hosts``` añadiendo una línea al fichero que sea la la IP y el host de la máquina virtual
+Aprovechando que la máquina virtual se encuentra reiniciandose procedemos a configurar nuestra máquina local para que cuando accedamos de manera rémota no tendremos que recordar la IP. el fichero que hay que modificar es el ```etc/hosts``` añadiendo una línea al fichero que sea la la IP y el host de la máquina virtual.
 
-![Image of cambiar nombre](img/cambiar%20hots.png)
+![Image of cambiar hosts](img/cambiar%20hosts.png)
 
 #### 3.2.4 Claves públicas-privadas
 
-Ahora realizaremos la configuración de las claves ssh con lo que conseguiremos que se pueda acceder a nuestra máquina virtual sin necesidad de introducir la contraseña. Para empezar revisaremos que tenemos una clave ssh creada:
+Ahora realizaremos la configuración de las claves ssh con lo que conseguiremos que se pueda acceder a nuestra máquina virtual sin necesidad de introducir la contraseña. Para empezar revisaremos que tenemos una clave ssh creada con el siguiente comando:
 
-![Image of cambiar nombre](img/clave%20ssh.png)
+```bash
+bruno@bruno-X550VX:~$ cat .ssh/id_rsa.pub
+```
 
+![Image of clave ssh](img/clave%20ssh.png)
+
+Podemos observar que ya tenía creada una clave, pero en el caso de no tenerla creada la creamos introduciendo el siguiente comando:
+
+```bash
+bruno@bruno-X550VX:~$ ssh-keygen
+```
+
+Es importante el no introducir ninguna *passphrase** asociada al par de claves pública-privada. Una vez que tengamos las claves ejecutamos el siguiente comando, lo cual nos permite copiar la clave desde la máquina local a la máquina virtual:
+
+```bash
+bruno@bruno-X550VX:~$ ssh-copy-id usuario@iaas-dsi13
+```
+
+Ahora, cuando realizemos una conexión rémota a la máquina virtual podemos acceder sin la necesidad de introducir ninguna contraseña.
+
+![Image of ssh sin contraseña](img/ssh%20sin%20contrase%C3%B1a.png)
+
+Por otro lado, si no queremos utilizar el nombre de usuario ```usuario```  de la máquina virtual a la hora de conectarnos vía SSH, podemos configurar el fichero ```/.ssh/config```, es posible que a lo mejor no lo tengamos creado por lo que podriamos crear con el comando ```touch```.
+
+```bash
+bruno@bruno-X550VX:~$ touch ~/.ssh/config
+bruno@bruno-X550VX:~$ vim ~/.ssh/config
+bruno@bruno-X550VX:~$ cat ~/.ssh/config
+Host iaas-dsi13
+  Hostname iaas-dsi13
+  User usuario
+```
+
+Con esto podemos iniciar una conexión SSH simplemente indicando el nombre de la máquina virtual.
+
+![Image of ssh solo nombre](img/ssh%20solo%20nombre.png)
+
+Para terminar este apartado, vamos a generar las claves pública-privada en la máquina virtual también, siguiendo los pasos que seguimos con anterioridad en la máquina local.
+
+```bash
+usuario@iaas-dsi13:~$  ssh-keygen
+...
+usuario@iaas-dsi13:~$  cat ./ssh/id_rsa.pub
+```
 
 ### 3.3 Instalación de git y Node.js en la máquina virtual del Iaas
 
 #### 3.3.1 Instalación y configuración de git
+
+Continuamos con la instalación de git en nuestra máquina virtual, para eso ejecutamos:
+
+```bash
+usuario@iaas-dsi13:~$  sudo apt install git
+...
+
+```
+
+Una vez instalado es necesario realizar las configuraciones iniciales que se reduciría a los siguientes comandos:
+
+CONTINUAR POR AQUÍ
 
 #### 3.3.2 Configuración del prompt
 
