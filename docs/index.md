@@ -60,7 +60,7 @@ ECDSA key fingerprint is SHA256:1Xm4M66FeBUSiykP7SqJgObwjmVs2gEouBhy1PTWDV4.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-por lo que tendremos que introducir ```ỳes```. Una vez hecho esto nos pedirá introducir la contraseña (por defecto las credenciales son ```usuario``` y de contraseña ```ùsuario```
+por lo que tendremos que introducir ```ỳes```. Una vez hecho esto nos pedirá introducir la contraseña (por defecto las credenciales son ```usuario``` y ```ùsuario``` para el usuario y la contraseña, respectivamente). Cuando la hayamos introducido el sistema nos pedirá modificarla. Para ellos, introduciremos la contraseña actual que es ```usuario``` y, luego la nueva contraseña por duplicado. 
 
 #### 3.2.4 Claves públicas-privadas
 
