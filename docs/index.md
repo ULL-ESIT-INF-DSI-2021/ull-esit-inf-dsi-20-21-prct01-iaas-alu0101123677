@@ -35,7 +35,7 @@ Cuando ya tengamos el repositorio de la práctica 1, necesitaremos saber manejar
 
 Lo primero será la configuración inicial para conectarse a la VPN de la ULL, en mi caso ya tenía acceso directo a la VPN gracias a asignaturas anteriores, pero para configurarla según el sistema operativo se puede seguir la siguiente guía [Configuración de VPN de la ULL](https://www.ull.es/servicios/stic/2020/12/01/servicio-de-vpn-de-la-ull/). En mi caso yo cuento con Ubunto por lo que se vería de la siguiente forma una vez conectados a la VPN.
 
-Poner imagen
+![Image of VPN](img/vpn.png)
 
 #### 3.2.2 Acceso al servicio Iaas de la ULL
 
