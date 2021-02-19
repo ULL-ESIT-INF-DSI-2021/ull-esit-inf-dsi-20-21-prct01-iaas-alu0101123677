@@ -37,13 +37,13 @@ Lo primero será la configuración inicial para conectarse a la VPN de la ULL, e
 
 #### 3.2.2 Acceso al servicio Iaas de la ULL
 
-Conectados a la VPN accedemos al [IaaS de la ULL](https://iaas.ull.es) con nuestro correo institucional, elegimos la máquina virtual de DSI y la iniciamos, una vez que la iniciamos se nos asignara una para nuestro uso, la mía en concreto es la -----. Dentro del menú de la máquina buscamos la IP externa para así poder acceder remotamente.
-
-Poner imagen
+Conectados a la VPN accedemos al [IaaS de la ULL](https://iaas.ull.es) con nuestro correo institucional, elegimos la máquina virtual de DSI y la iniciamos, una vez que la iniciamos se nos asignara una para nuestro uso, la mía en concreto es la DSI-13. Dentro del menú de la máquina buscamos la IP externa para así poder acceder remotamente.
 
 Poner imagen
 
 #### 3.2.3 Conexión remota y primeras configuraciones
+
+Conectados a la VPN de la ULL y con la máquina virtual encendida procedemos a abrir un terminal y a conectarnos de manera rémota mediante el comando ```ssh```
 
 #### 3.2.4 Claves públicas-privadas
 
