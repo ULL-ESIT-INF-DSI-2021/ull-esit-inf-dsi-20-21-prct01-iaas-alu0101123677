@@ -25,7 +25,7 @@ Para el desarrollo de la práctica cómo tal primero hay que hacer unas preparac
 
 Cuando ya tengamos el repositorio de la práctica 1, necesitaremos saber manejarnos con el lenguaje de marcas Markdown y aprender a crear un GitHub Pages, Las siguientes guias son muy útiles, [Introducción a Markdown](https://guides.github.com/features/mastering-markdown/) y [GitHub Pages](https://docs.github.com/en/github/working-with-github-pages). Igualmente, para crear una Page de GitHub antes necesitamos tener archivos en nuestro repositorio, empezaremos creando un README.md para explicar la función del repositorio y un index.md dentro de una carpeta llamada docs en donde pondremos todo el contenido que cogerá GitHub Pages para la presentación del informe. Con esto, nos dirigmos a Settings y nos vamos a al apartado de GitHub Pages, aquí escogemos cómo Branch nuestro main, le damos a guardar y escogemos como carpeta /docs, con esto ya abremos creado la Page de GitHub, lo siguiente es escoger un tema en el selector de temas, para este informe se escogio Cayman. El resultado final quedaría de la siguiente manera.
 
-![Image of Settings](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct01-iaas-alu0101123677/blob/main/docs/img/Setting%20GitHub%20Page.jpg)
+![Image of Settings](img/Setting%20GitHub%20Page.jpg)
 
 
 
