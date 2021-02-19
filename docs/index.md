@@ -35,18 +35,21 @@ Cuando ya tengamos el repositorio de la práctica 1, necesitaremos saber manejar
 
 Lo primero será la configuración inicial para conectarse a la VPN de la ULL, en mi caso ya tenía acceso directo a la VPN gracias a asignaturas anteriores, pero para configurarla según el sistema operativo se puede seguir la siguiente guía [Configuración de VPN de la ULL](https://www.ull.es/servicios/stic/2020/12/01/servicio-de-vpn-de-la-ull/). En mi caso yo cuento con Ubunto por lo que se vería de la siguiente forma una vez conectados a la VPN.
 
+Poner imagen
+
 #### 3.2.2 Acceso al servicio Iaas de la ULL
 
 Conectados a la VPN accedemos al [IaaS de la ULL](https://iaas.ull.es) con nuestro correo institucional, elegimos la máquina virtual de DSI y la iniciamos, una vez que la iniciamos se nos asignara una para nuestro uso, la mía en concreto es la DSI-13. Dentro del menú de la máquina buscamos la IP externa para así poder acceder remotamente.
 
-Poner imagen
+![Image of Ip máquina virtual](img/Ip%20maquina%20virtual.png)
+
 
 #### 3.2.3 Conexión remota y primeras configuraciones
 
 Conectados a la VPN de la ULL y con la máquina virtual encendida procedemos a abrir un terminal y a conectarnos de manera rémota mediante el comando ```ssh```
 
 ```bash
-$ ssh usuario@10.6.XXX.XXX
+bruno@bruno-X550VX:~$ ssh usuario@10.6.XXX.XXX
 ```
 
 Cuando nos hayamos conectado rémotamente nos preguntará lo siguiente 
@@ -57,7 +60,7 @@ ECDSA key fingerprint is SHA256:1Xm4M66FeBUSiykP7SqJgObwjmVs2gEouBhy1PTWDV4.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-por lo que tendremos que introducir ```ỳes```
+por lo que tendremos que introducir ```ỳes```. Una vez hecho esto nos pedirá introducir la contraseña (por defecto las credenciales son ```usuario``` y de contraseña ```ùsuario```
 
 #### 3.2.4 Claves públicas-privadas
 
