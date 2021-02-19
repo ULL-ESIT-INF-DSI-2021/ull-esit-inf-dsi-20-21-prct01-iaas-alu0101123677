@@ -27,13 +27,15 @@ Cuando ya tengamos el repositorio de la práctica 1, necesitaremos saber manejar
 
 ![Image of Settings](img/Setting%20GitHub%20Page.jpg)
 
-
-
 ### 3.2 Configuración de la máquina virtual en el Iaas
 
 ####   3.2.1 Conectarse a la VPN de la ULL
 
+Lo primero será la configuración inicial para conectarse a la VPN de la ULL, en mi caso ya tenía acceso directo a la VPN gracias a asignaturas anteriores, pero para configurarla según el sistema operativo se puede seguir la siguiente guía -------. En mi caso yo cuento con Ubunto por lo que se vería de la siguiente forma una vez conectados a la VPN.
+
 #### 3.2.2 Acceso al servicio Iaas de la ULL
+
+Conectados a la VPN accedemos a ----- con nuestro correo institucional, elegimos la máquina virtual de DSI y la iniciamos, una vez que la iniciamos se nos asignara una para nuestro uso, la mía en concreto es la -----,
 
 #### 3.2.3 Conexión remota y primeras configuraciones
 
