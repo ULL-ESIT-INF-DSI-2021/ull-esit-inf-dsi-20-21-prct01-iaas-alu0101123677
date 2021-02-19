@@ -43,7 +43,7 @@ Poner imagen
 
 #### 3.2.3 Conexión remota y primeras configuraciones
 
-Conectados a la VPN de la ULL y con la máquina virtual encendida procedemos a abrir un terminal y a conectarnos de manera rémota mediante el comando ```ssh```
+Conectados a la VPN de la ULL y con la máquina virtual encendida procedemos a abrir un terminal y a conectarnos de manera rémota mediante el comando ```*ssh*```
 
 #### 3.2.4 Claves públicas-privadas
 
