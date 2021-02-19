@@ -60,9 +60,40 @@ ECDSA key fingerprint is SHA256:1Xm4M66FeBUSiykP7SqJgObwjmVs2gEouBhy1PTWDV4.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-por lo que tendremos que introducir ```ỳes```. Una vez hecho esto nos pedirá introducir la contraseña (por defecto las credenciales son ```usuario``` y ```ùsuario``` para el usuario y la contraseña, respectivamente). Cuando la hayamos introducido el sistema nos pedirá modificarla. Para ellos, introduciremos la contraseña actual que es ```usuario``` y, luego la nueva contraseña por duplicado. 
+por lo que tendremos que introducir ```ỳes```. Una vez hecho esto nos pedirá introducir la contraseña (por defecto las credenciales son ```usuario``` y ```ùsuario``` para el usuario y la contraseña, respectivamente). Cuando la hayamos introducido el sistema nos pedirá modificarla. Para ellos, introduciremos la contraseña actual que es ```usuario``` y, luego la nueva contraseña por duplicado.
+
+![Image of SSH](img/ssh.png)
+
+
+Lo siguiente será cambiar el nombre de nuestra máquina, para eso abriremos el fichero ```/etc/hostname``` con ```Vi``` o ```Vim``` y el nombre de *ubuntu* lo cambiamos por el de nuestra máquina virtual, en nuestro caso es *iaas_dsi13*
+
+![Image of cambiar nombre](img/cambiar%20nombre.png)
+
+A su vez, cambiaremos donde pone *ubuntu* en el siguiente fichero ```/etc/hosts``` también por el nombre de la máquina virtual, con esto cambiamos el nombre del host
+
+**poner una imgane 4**
+
+Ahora tendriamos que reiniciar nuestra máquina virtual para que todo los cambios tengan efecto, pero antes actualizaremos el software de la misma. Para esto realizamos los siguientes comandos:
+
+```bash
+usuario@ubuntu:~$ sudo apt update
+...
+usuario@ubuntu:~$ sudo apt upgrade
+...
+usuario@ubuntu:~$ sudo reboot
+...
+```
+
+Aprovechando que la máquina virtual se encuentra reiniciandose procedemos a configurar nuestra máquina local para que cuando accedamos de manera rémota no tendremos que recordar la IP. el fichero que hay que modificar es el ```ètc/hosts``` añadiendo una línea al fichero que sea la la IP y el host de la máquina virtual
+
+**poner la imagen 5**
+
 
 #### 3.2.4 Claves públicas-privadas
+
+Ahora realizaremos la configuración de las claves ssh con lo que conseguiremos que se pueda acceder a nuestra máquina virtual sin necesidad de introducir la contraseña. Para empezar revisaremos que tenemos una clave ssh creada:
+
+
 
 ### 3.3 Instalación de git y Node.js en la máquina virtual del Iaas
 
