@@ -192,9 +192,77 @@ usuario@iaas-dsi13:~$ exec bash -l
 
 #### 3.3.3 Conexión con GitHub
 
-CONTINUAR AQUI
+Para comprobar si realmente el prompt muestra lo que deseamos, que no es otra cosa que la rama actual de trabajo cuando accedemos a un directorio asociado a un repositorio, tendremos que añadir la clave pública de la máquina virtual en la configuración de las claves de nuestra cuenta de GitHub, de modo que nos sea mucho más fácil trabajar con repositorios remotos, y así poder también clonar alguno de los repositorios para hacer la prueba. En primer lugar, copiaremos la clave pública de nuestra máquina virtual:
+
+```bash
+[~()]$cat ~/.ssh/id_rsa.pub
+```
+
+Una vez copiada, accedemos a la configuración de la cuenta de GitHub (account settings), y en la sección SSH and GPG keys, pulsamos sobre el botón New SSH key. En el formulario añadimos un título para la clave y pegamos la clave pública de nuestra máquina virtual en el campo de texto key. Por último, pulsamos sobre el botón Add SSH key. Si todo ha ido bien, ahora podríamos ejecutar el siguiente comando desde la máquina virtual para clonar un repositorio:
+
+
+```bash
+[~()]$git clone git@github.com:ULL-ESIT-INF-DSI-2021/prct01-iaas-vscode.git
+...
+[~()]$ls
+prct01-iaas-vscode
+[~()]$cd prct01-iaas-vscode/
+[~/prct01-iaas-vscode(main)]$
+```
+
+![Image of clone git](img/clone%20git.png)
 
 #### 3.3.4 Instalación de Node
+
+Ahora vamos a proceder a Instalar Node Version Manager (nvm), el gestor de versiones de **Node.js**. **Node.js** es una entorno que permite la ejecución de código desarrollado en JavaScript y variantes, como por ejemplo, TypeScript
+
+```bash
+[~()]$wget -q0- https://raw.githubusercontent.com/nvm/v0.37.2/install.sh | bash
+[~()]$exec bash -l
+[~()]$nvm --verion
+0.37.2
+```
+
+![Image of instalación node](img/instalaci%C3%B3n%20node.png)
+
+
+Ahora que hemos instalado nvm satisfactoriamente procedemos a instalar la versión más reciente de Node.js
+
+```bash
+[~()]$nvm install node
+...
+[~()]$node --version
+v15.8.0
+[~()]$npm --version
+7.5.1
+```
+
+![Image of instalación node2](img/instalaci%C3%B3n%20node%202.png)
+
+Al instalar Node.js podemos observar como se ha instalado la última versión (15.8.0), además de la última versión de Node Package Manager (npm), el gestor de paquetes de Node.js. Para instalar una versión concreta de Node.js, podemos hacer lo siguiente:
+
+```bash
+[~()]$nvm install 12.0.0
+...
+[~()]$node --version
+v12.0.0
+[~()]$npm --version
+6.9.0
+```
+
+Por último, para cambiar entre versiones, podemos ejecutar los siguientes comandos:
+
+```nvm list
+...
+[~()]$nvm use v15.8.0
+Now using node v15.8.0 (npm v7.5.1)
+[~()]$node --version
+v15.8.0
+[~()]$npm --version
+7.5.1
+```
+
+![Image of instalación node2](img/cambio%20de%20versi%C3%B3n.png)
 
 ## 4. Conclusiones
 
