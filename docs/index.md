@@ -1,29 +1,29 @@
 # Informe Práctica 1. Configuración de máquina virtual en el IaaS
 ## 1. Introducción
 
-Informe de la primera práctica de la asignatura de **Desarrollo de Sistemas Informáticos**. En la práctica propuesta se ha realizado la configuración inicial de la **máquina virtual** otorgada mediante el **IaaS**, así cómo la posterior instalación de **git** y **Node.js**, además de configurar la **máquina local** para agilizar la conexión rémota entre ambas máquinas, y con el GitHub asociado al correo institucional. A su vez, aprender a utilizar el lenguaje de marcas **Markdown** y **GitHub Pages**.
+Informe de la primera práctica de la asignatura de **Desarrollo de Sistemas Informáticos**. En la práctica propuesta se ha realizado la configuración inicial de la **máquina virtual** otorgada mediante el **IaaS**, así cómo la posterior instalación de **git** y **Node.js**, además de configurar la **máquina local** para agilizar la conexión remota entre ambas máquinas, y con el GitHub asociado al correo institucional. A su vez, aprender a utilizar el lenguaje de marcas **Markdown** y **GitHub Pages**.
 
 ## 2. Objetivos
 
 El objetivo principal de la práctica es la preparación del entorno de trabajo de la asignatura. Para conseguirlo se tienen los siguientes objetivos:
 
-* Aprender a conectarse a la **VPN de la ULL**, así cómo acceder al Iaas de la ULL.
-* Saber realizar una conexión rémota mediante **SSH**.
+* Aprender a conectarse a la **VPN de la ULL**, así como acceder al Iaas de la ULL.
+* Saber realizar una conexión remota mediante **SSH**.
 * Configuración inicial de la máquina virtual.
 * Configuración inicial de la máquina local.
 * Manejo de **claves SSH**.
 * Configuración de del **prompt** del la máquina virtual.
-* Instalación de git y Node en la máquina virtual.
-* Utilización del lenguaje de marcas Markdown.
-* Utilización de la herramienta GitHub Pages.
+* Instalación de **git** y **Node** en la máquina virtual.
+* Utilización del **lenguaje de marcas Markdown**.
+* Utilización de la herramienta **GitHub Pages**.
 
 ## 3. Desarrollo
 
 ### 3.1 Tareas Previas
 
-Para el desarrollo de la práctica cómo tal primero hay que hacer unas preparaciones previas, cumplimentar las encuestas de elección de trabajo y la de expectativas y conocimientos, darse de alta en el Google Classroom, así cómo solicitar los beneficios de estudiantes de GitHub Education con nuestro GitHub asociado del correo institucional, darnos de alta en el GitHub Classroom así cómo la asignación para obtener el repositorio para la práctica 1.
+Para el desarrollo de la práctica cómo tal primero hay que hacer unas preparaciones previas, cumplimentar las encuestas de elección de trabajo y la de expectativas y conocimientos, darse de alta en el **Google Classroom**, así como solicitar los beneficios de estudiantes de **GitHub Education** con nuestro **GitHub** asociado del correo institucional, darnos de alta en el **GitHub Classroom** así como la asignación para obtener el **repositorio** para la **práctica 1**.
 
-Cuando ya tengamos el repositorio de la práctica 1, necesitaremos saber manejarnos con el lenguaje de marcas Markdown y aprender a crear un GitHub Pages, Las siguientes guias son muy útiles, [Introducción a Markdown](https://guides.github.com/features/mastering-markdown/) y [GitHub Pages](https://docs.github.com/en/github/working-with-github-pages). Igualmente, para crear una Page de GitHub antes necesitamos tener archivos en nuestro repositorio, empezaremos creando un README.md para explicar la función del repositorio y un index.md dentro de una carpeta llamada docs en donde pondremos todo el contenido que cogerá GitHub Pages para la presentación del informe. Con esto, nos dirigmos a Settings y nos vamos a al apartado de GitHub Pages, aquí escogemos cómo Branch nuestro main, le damos a guardar y escogemos como carpeta /docs, con esto ya abremos creado la Page de GitHub, lo siguiente es escoger un tema en el selector de temas, para este informe se escogio Cayman. El resultado final quedaría de la siguiente manera.
+Cuando ya tengamos el repositorio de la **práctica 1**, necesitaremos saber manejarnos con el **lenguaje de marcas Markdown** y aprender a crear un **GitHub Pages**, Las siguientes guías son muy útiles, [Introducción a Markdown](https://guides.github.com/features/mastering-markdown/) y [GitHub Pages](https://docs.github.com/en/github/working-with-github-pages). Igualmente, para crear una **Page de GitHub** antes necesitamos tener archivos en nuestro repositorio, empezaremos creando un *README.md* para explicar la función del repositorio y un *index.md* dentro de una carpeta llamada *docs* en donde pondremos todo el contenido que cogerá **GitHub Pages** para la presentación del informe. Con esto, nos dirigmos a **Settings** y nos vamos a al apartado de **GitHub Pages**, aquí escogemos cómo **Branch** nuestro *main*, le damos a guardar y escogemos como carpeta ```/docs```, con esto ya habremos creado la **Page de GitHub**, lo siguiente es escoger un tema en el selector de temas, para este informe se escogió Cayman. El resultado final quedaría de la siguiente manera.
 
 ![Image of Settings](img/Setting%20GitHub%20Page.jpg)
 
@@ -33,20 +33,20 @@ Cuando ya tengamos el repositorio de la práctica 1, necesitaremos saber manejar
 
 ####   3.2.1 Conectarse a la VPN de la ULL
 
-Lo primero será la configuración inicial para conectarse a la VPN de la ULL, en mi caso ya tenía acceso directo a la VPN gracias a asignaturas anteriores, pero para configurarla según el sistema operativo se puede seguir la siguiente guía [Configuración de VPN de la ULL](https://www.ull.es/servicios/stic/2020/12/01/servicio-de-vpn-de-la-ull/). En mi caso yo cuento con Ubunto por lo que se vería de la siguiente forma una vez conectados a la VPN.
+Lo primero será la configuración inicial para conectarse a la **VPN** de la ULL, en mi caso ya tenía acceso directo a la **VPN** gracias a asignaturas anteriores, pero para configurarla según el sistema operativo se puede seguir la siguiente guía [Configuración de VPN de la ULL](https://www.ull.es/servicios/stic/2020/12/01/servicio-de-vpn-de-la-ull/). En mi caso yo cuento con **Ubuntu** por lo que se vería de la siguiente forma una vez conectados a la **VPN**.
 
 ![Image of VPN](img/vpn.png)
 
-#### 3.2.2 Acceso al servicio Iaas de la ULL
+#### 3.2.2 Acceso al servicio IaaS de la ULL
 
-Conectados a la VPN accedemos al [IaaS de la ULL](https://iaas.ull.es) con nuestro correo institucional, elegimos la máquina virtual de DSI y la iniciamos, una vez que la iniciamos se nos asignara una para nuestro uso, la mía en concreto es la DSI-13. Dentro del menú de la máquina buscamos la IP externa para así poder acceder remotamente.
+Conectados a la **VPN** accedemos al [IaaS de la ULL](https://iaas.ull.es) con nuestro correo institucional, elegimos la **máquina virtual** de DSI y la iniciamos, una vez que la iniciamos se nos asignara una para nuestro uso, la mía en concreto es la DSI-13. Dentro del menú de la máquina buscamos la **IP externa** para así poder **acceder remotamente**.
 
 ![Image of Ip máquina virtual](img/Ip%20maquina%20virtual.png)
 
 
 #### 3.2.3 Conexión remota y primeras configuraciones
 
-Conectados a la VPN de la ULL y con la máquina virtual encendida procedemos a abrir un terminal y a conectarnos de manera rémota mediante el comando ```ssh```.
+Conectados a la **VPN** de la ULL y con la máquina virtual encendida procedemos a abrir un **terminal** y a conectarnos de **manera remota** mediante el comando ```ssh```.
 
 ```bash
 bruno@bruno-X550VX:~$ ssh usuario@10.6.XXX.XXX
@@ -69,7 +69,7 @@ Lo siguiente será cambiar el nombre de nuestra máquina, para eso abriremos el 
 
 ![Image of cambiar nombre](img/cambiar%20nombre.png)
 
-A su vez, cambiaremos donde pone *ubuntu* en el siguiente fichero ```/etc/hosts``` también por el nombre de la máquina virtual, con esto cambiamos el nombre del host.
+A su vez, cambiaremos donde pone *ubuntu* en el siguiente fichero ```/etc/hosts``` también por el nombre de la **máquina virtual**, con esto cambiamos el nombre del host.
 
 ![Image of host local](img/host%20local.png)
 
@@ -85,13 +85,13 @@ usuario@ubuntu:~$ sudo reboot
 ...
 ```
 
-Aprovechando que la máquina virtual se encuentra reiniciandose procedemos a configurar nuestra máquina local para que cuando accedamos de manera rémota no tendremos que recordar la IP. el fichero que hay que modificar es el ```etc/hosts``` añadiendo una línea al fichero que sea la la IP y el host de la máquina virtual.
+Aprovechando que la **máquina virtual** se encuentra reiniciándose procedemos a configurar nuestra **máquina local** para que cuando accedamos de manera remota no tendremos que recordar la IP. el fichero que hay que modificar es el ```etc/hosts``` añadiendo una línea al fichero que sea la la **IP** y el host de la **máquina virtual**.
 
 ![Image of cambiar hosts](img/cambiar%20hosts.png)
 
 #### 3.2.4 Claves públicas-privadas
 
-Ahora realizaremos la configuración de las claves ssh con lo que conseguiremos que se pueda acceder a nuestra máquina virtual sin necesidad de introducir la contraseña. Para empezar revisaremos que tenemos una clave ssh creada con el siguiente comando:
+Ahora realizaremos la configuración de las **claves ssh** con lo que conseguiremos que se pueda acceder a nuestra **máquina virtual** sin necesidad de introducir la contraseña. Para empezar revisaremos que tenemos una **clave ssh** creada con el siguiente comando:
 
 ```bash
 bruno@bruno-X550VX:~$ cat .ssh/id_rsa.pub
@@ -111,11 +111,11 @@ Es importante el no introducir ninguna *passphrase** asociada al par de claves p
 bruno@bruno-X550VX:~$ ssh-copy-id usuario@iaas-dsi13
 ```
 
-Ahora, cuando realizemos una conexión rémota a la máquina virtual podemos acceder sin la necesidad de introducir ninguna contraseña.
+Ahora, cuando realizamos una **conexión remota** a la **máquina virtual** podemos acceder sin la necesidad de introducir ninguna contraseña.
 
 ![Image of ssh sin contraseña](img/ssh%20sin%20contrase%C3%B1a.png)
 
-Por otro lado, si no queremos utilizar el nombre de usuario ```usuario```  de la máquina virtual a la hora de conectarnos vía SSH, podemos configurar el fichero ```/.ssh/config```, es posible que a lo mejor no lo tengamos creado por lo que podriamos crear con el comando ```touch```.
+Por otro lado, si no queremos utilizar el nombre de usuario ```usuario```  de la **máquina virtual** a la hora de conectarnos vía SSH, podemos configurar el fichero ```/.ssh/config```, es posible que a lo mejor no lo tengamos creado por lo que podríamos crear con el comando ```touch```.
 
 ```bash
 bruno@bruno-X550VX:~$ touch ~/.ssh/config
@@ -126,11 +126,11 @@ Host iaas-dsi13
   User usuario
 ```
 
-Con esto podemos iniciar una conexión SSH simplemente indicando el nombre de la máquina virtual.
+Con esto podemos iniciar una conexión SSH simplemente indicando el nombre de la **máquina virtual**.
 
 ![Image of ssh solo nombre](img/ssh%20solo%20nombre.png)
 
-Para terminar este apartado, vamos a generar las claves pública-privada en la máquina virtual también, siguiendo los pasos que seguimos con anterioridad en la máquina local.
+Para terminar este apartado, vamos a generar las **claves pública-privada** en la **máquina virtual** también, siguiendo los pasos que seguimos con anterioridad en la **máquina local.**
 
 ```bash
 usuario@iaas-dsi13:~$ ssh-keygen
@@ -138,11 +138,11 @@ usuario@iaas-dsi13:~$ ssh-keygen
 usuario@iaas-dsi13:~$ cat ./ssh/id_rsa.pub
 ```
 
-### 3.3 Instalación de git y Node.js en la máquina virtual del Iaas
+### 3.3 Instalación de git y Node.js en la máquina virtual del IaaS
 
 #### 3.3.1 Instalación y configuración de git
 
-Continuamos con la instalación de git en nuestra máquina virtual, para eso ejecutamos:
+Continuamos con la instalación de **git** en nuestra **máquina virtual**, para eso ejecutamos:
 
 ```bash
 usuario@iaas-dsi13:~$ sudo apt install git
@@ -161,11 +161,11 @@ usuario@iaas-dsi13:~$ git config --list
 
 ![Image of git config](img/git%20config.png)
 
-Si se quiere profundizar en la configuración inicial del git se puede acceder al siguiente enlace [Configurar Git por primera vez](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Configurando-Git-por-primera-vez).
+Si se quiere profundizar en la configuración inicial del **git** se puede acceder al siguiente enlace [Configurar Git por primera vez](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Configurando-Git-por-primera-vez).
 
 #### 3.3.2 Configuración del prompt
 
-Ahora, configuraremos el prompt de la terminal para que aparezca la rama actual en la que nos encontramos cuando accedemos a algún directorio que resulta estar asociado a un repositorio git. Para ello descargaremos el script [git prompt](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh), también podemos crear un fichero con ```touch``` al que llamaremos *git-prompt.sh* y en el que copiaremos el contenido del script [git prompt](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh) usando ```Vi``` o ```Vim```. Una vez con nuestro fichero en nuestra máquina virtual procedemos acambiarle el nombre con el comando ```mv```.
+Ahora, configuraremos el prompt de la terminal para que aparezca la rama actual en la que nos encontramos cuando accedemos a algún directorio que resulta estar asociado a un **repositorio git**. Para ello descargaremos el script [git prompt](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh), también podemos crear un fichero con ```touch``` al que llamaremos *git-prompt.sh* y en el que copiaremos el contenido del script [git prompt](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh) usando ```Vi``` o ```Vim```. Una vez con nuestro fichero en nuestra **máquina virtual** procedemos acambiarle el nombre con el comando ```mv```.
 
 ```bash
 usuario@iaas-dsi13:~$ mv git-prompt.sh .git-prompt.sh
@@ -192,13 +192,13 @@ usuario@iaas-dsi13:~$ exec bash -l
 
 #### 3.3.3 Conexión con GitHub
 
-Para comprobar si realmente el prompt muestra lo que deseamos, que no es otra cosa que la rama actual de trabajo cuando accedemos a un directorio asociado a un repositorio, tendremos que añadir la clave pública de la máquina virtual en la configuración de las claves de nuestra cuenta de GitHub, de modo que nos sea mucho más fácil trabajar con repositorios remotos, y así poder también clonar alguno de los repositorios para hacer la prueba. En primer lugar, copiaremos la clave pública de nuestra máquina virtual:
+Para comprobar si realmente el prompt muestra lo que deseamos, que no es otra cosa que la rama actual de trabajo cuando accedemos a un directorio asociado a un repositorio, tendremos que añadir la **clave pública** de la **máquina virtual** en la configuración de las claves de nuestra cuenta de **GitHub**, de modo que nos sea mucho más fácil trabajar con **repositorios remotos**, y así poder también clonar alguno de los repositorios para hacer la prueba. En primer lugar, copiaremos la **clave pública** de nuestra **máquina virtual**:
 
 ```bash
 [~()]$cat ~/.ssh/id_rsa.pub
 ```
 
-Una vez copiada, accedemos a la configuración de la cuenta de GitHub (account settings), y en la sección SSH and GPG keys, pulsamos sobre el botón New SSH key. En el formulario añadimos un título para la clave y pegamos la clave pública de nuestra máquina virtual en el campo de texto key. Por último, pulsamos sobre el botón Add SSH key. Si todo ha ido bien, ahora podríamos ejecutar el siguiente comando desde la máquina virtual para clonar un repositorio:
+Una vez copiada, accedemos a la configuración de la cuenta de **GitHub** (account settings), y en la sección *SSH* and *GPG keys*, pulsamos sobre el botón New *SSH key*. En el formulario añadimos un título para la clave y pegamos la **clave pública** de nuestra **máquina virtual** en el campo de texto key. Por último, pulsamos sobre el botón Add *SSH key*. Si todo ha ido bien, ahora podríamos ejecutar el siguiente comando desde la **máquina virtual** para clonar un repositorio:
 
 
 ```bash
@@ -214,7 +214,7 @@ prct01-iaas-vscode
 
 #### 3.3.4 Instalación de Node
 
-Ahora vamos a proceder a Instalar Node Version Manager (nvm), el gestor de versiones de **Node.js**. **Node.js** es una entorno que permite la ejecución de código desarrollado en JavaScript y variantes, como por ejemplo, TypeScript
+Ahora vamos a proceder a instalar Node Version Manager (nvm), el gestor de versiones de **Node.js**. **Node.js** es un entorno que permite la ejecución de código desarrollado en **JavaScript** y variantes, como por ejemplo, **TypeScript**.
 
 ```bash
 [~()]$wget -q0- https://raw.githubusercontent.com/nvm/v0.37.2/install.sh | bash
@@ -226,7 +226,7 @@ Ahora vamos a proceder a Instalar Node Version Manager (nvm), el gestor de versi
 ![Image of instalación node](img/instalaci%C3%B3n%20node.png)
 
 
-Ahora que hemos instalado nvm satisfactoriamente procedemos a instalar la versión más reciente de Node.js
+Ahora que hemos instalado nvm satisfactoriamente procedemos a instalar la versión más reciente de **Node.js**.
 
 ```bash
 [~()]$nvm install node
@@ -239,7 +239,7 @@ v15.8.0
 
 ![Image of instalación node2](img/instalaci%C3%B3n%20node%202.png)
 
-Al instalar Node.js podemos observar como se ha instalado la última versión (15.8.0), además de la última versión de Node Package Manager (npm), el gestor de paquetes de Node.js. Para instalar una versión concreta de Node.js, podemos hacer lo siguiente:
+Al instalar **Node.js** podemos observar como se ha instalado la última versión (15.8.0), además de la última versión de **Node Package Manager (npm)**, el gestor de paquetes de **Node.js**. Para instalar una versión concreta de **Node.js**, podemos hacer lo siguiente:
 
 ```bash
 [~()]$nvm install 12.0.0
@@ -266,9 +266,9 @@ v15.8.0
 
 ## 4. Conclusiones
 
-En conclusión me parece que este tipo de prácticas introductorias son muy importantes debido a que si no se han realizado con anterioridad conexiones remotas, conectarse a una vpn o configurar un entorno de trabajo, son cosas que se tienen que tener en cuenta cómo básicas a nivel profesional en el mundo de la ingeniería informatica. Por otro lado, también es importante saber cómo manejarse con GitHub, sus repositorios y control de versiones con git, así cómo tener soltura con un lenguaje de marcas cómo Markdown o herramientas como GitHub Pages.
+En conclusión, me parece que este tipo de prácticas introductorias son muy importantes debido a qué si no se han realizado con anterioridad **conexiones remotas**, conectarse a una **VPN** o configurar un **entorno de trabajo**, son cosas que se tienen que tener en cuenta como básicas a nivel profesional en el mundo de la **ingeniería informática**. Por otro lado, también es importante saber cómo manejarse con **GitHub**, sus repositorios y control de versiones con **git**, así como tener soltura con un **lenguaje de marcas** como **Markdown** o herramientas como **GitHub Pages**.
 
-Ya para terminar, recalcar la importancia de la preparación del entorno de trabajo para así llegar a aportar soluciones de la manera más óptima posible, en este caso preparando para utilizar JavaScript y TypeScript.
+Ya para terminar, recalcar la importancia de la preparación del entorno de trabajo para así llegar a aportar soluciones de la manera más óptima posible, en este caso preparando para utilizar **JavaScript** y **TypeScript**.
 
 ## 5. Bibliografía
 
