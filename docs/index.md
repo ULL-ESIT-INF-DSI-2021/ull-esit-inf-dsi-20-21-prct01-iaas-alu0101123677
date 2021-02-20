@@ -133,9 +133,9 @@ Con esto podemos iniciar una conexión SSH simplemente indicando el nombre de la
 Para terminar este apartado, vamos a generar las claves pública-privada en la máquina virtual también, siguiendo los pasos que seguimos con anterioridad en la máquina local.
 
 ```bash
-usuario@iaas-dsi13:~$  ssh-keygen
+usuario@iaas-dsi13:~$ ssh-keygen
 ...
-usuario@iaas-dsi13:~$  cat ./ssh/id_rsa.pub
+usuario@iaas-dsi13:~$ cat ./ssh/id_rsa.pub
 ```
 
 ### 3.3 Instalación de git y Node.js en la máquina virtual del Iaas
@@ -145,18 +145,54 @@ usuario@iaas-dsi13:~$  cat ./ssh/id_rsa.pub
 Continuamos con la instalación de git en nuestra máquina virtual, para eso ejecutamos:
 
 ```bash
-usuario@iaas-dsi13:~$  sudo apt install git
+usuario@iaas-dsi13:~$ sudo apt install git
 ...
 
 ```
 
-Una vez instalado es necesario realizar las configuraciones iniciales que se reduciría a los siguientes comandos:
+Una vez instalado es necesario realizar las configuraciones iniciales que se reduciría a los siguientes comandos a ejecutar:
 
-CONTINUAR POR AQUÍ
+```bash
+usuario@iaas-dsi13:~$ git config --global user.name "Bruno Arroyo"
+usuario@iaas-dsi13:~$ git config --global user.email alu0101123677@ull.edu.es
+usuario@iaas-dsi13:~$ git config --list
+...
+```
+
+![Image of git config](img/git%20config.png)
+
+Si se quiere profundizar en la configuración inicial del git se puede acceder al siguiente enlace [Configurar Git por primera vez](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Configurando-Git-por-primera-vez).
 
 #### 3.3.2 Configuración del prompt
 
+Ahora, configuraremos el prompt de la terminal para que aparezca la rama actual en la que nos encontramos cuando accedemos a algún directorio que resulta estar asociado a un repositorio git. Para ello descargaremos el script [git prompt](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh), también podemos crear un fichero con ```touch``` al que llamaremos *git-prompt.sh* y en el que copiaremos el contenido del script [git prompt](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh) usando ```Vi``` o ```Vim```. Una vez con nuestro fichero en nuestra máquina virtual procedemos acambiarle el nombre con el comando ```mv```.
+
+```bash
+usuario@iaas-dsi13:~$ mv git-prompt.sh .git-prompt.sh
+```
+
+Continuamos con la modificación del fichero ```~/.bashrc```, incluyendo al final del mismo las dos líneas de código siguiente.
+
+```bash
+usuario@iaas-dsi13:~$ vim .bashrc
+usuario@iaas-dsi13:~$ tail .bashrc
+...
+source ~/.git-prompt.sh
+PS1='\[\033]0;\u@\h:\w\007\]\[\033[0;34m\][\[\033[0;31m\]\w\[\033[0;32m\]($(git branch 2>/dev/null | sed -n "s/\* \(.*\)/\1/p"))\[\033[0;34m\]]$'
+```
+
+![Image of cambiar prompt](img/cambiar%20prompt.png)
+
+Terminando con este apartado, reiniciaremos la terminal, con lo que se actualizaran los cambios que hemos realizado y el prompt debería cambiar.
+
+```bash
+usuario@iaas-dsi13:~$ exec bash -l
+[~()]$
+```
+
 #### 3.3.3 Conexión con GitHub
+
+CONTINUAR AQUI
 
 #### 3.3.4 Instalación de Node
 
